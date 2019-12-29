@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+<head>
+  	<script src="functions.js"></script>
+  	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+</head>
+<body>
+<link rel="stylesheet" href="design.css">
+<div class="mainContent col-md-9 col-sm-12 col-xs-12">
+		<table class="table semester-table">
+			<thead>
+				<tr class="shaded">
+					<th>
+						&nbsp;
+					</th>
+					<th>
+						Grade
+					</th>
+					<th>
+						Hours
+					</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td class="shaded" style="background-color: #bb8d0a; color: #ffffff;">
+						Class 1
+					</td>
+					<td class="notshaded">
+						<input type="text" class="textfield form-control ng-pristine ng-valid ng-touched" name="class1Grade" id="class1Grade" ng-model="class1Grade" value="A+">
+					</td>
+					<td class="notshaded">
+						<input type="number" class="textfield form-control ng-pristine ng-valid ng-touched" name="class1Hours" id="class1Hours" ng-model="class1Hours" value="3">
+					</td>
+				</tr>
+				<tr>
+					<td class="shaded" style="background-color: #bb8d0a; color: #ffffff;">
+						Class 2
+					</td>
+					<td class="notshaded">
+						<input type="text" class="textfield form-control ng-pristine ng-untouched ng-valid" name="class2Grade" id="class2Grade" ng-model="class2Grade">
+					</td>
+					<td class="notshaded">
+						<input type="number" class="textfield form-control ng-pristine ng-untouched ng-valid" name="class2Hours" id="class2Hours" ng-model="class2Hours">
+					</td>
+				</tr>
+				<tr>
+					<td class="shaded" style="background-color:#bb8d0a; color:#ffffff;">
+						Class 3
+					</td>
+					<td class="nothsaded">
+						<input type="text" class="textfield form-control ng-pristine ng-untouched ng-valid" name="class3Grade" id="class3Grade" ng-model="class3Grade">
+					</td>
+					<td class="notshaded">
+						<input type="number" class="textfield form-control ng-pristine ng-untouched ng-valid" name="class3Hours" id="class3Hours" ng-model="class3Hours">
+					</td>
+				</tr>
+				<tr>
+					<td class="shaded" style="background-color: #bb8d0a; color:#ffffff;">
+						Class 4
+					</td>
+					<td class="notshaded">
+						<input type="text" class="textfield form-control ng-pristine ng-untouched ng-valid" name="class4Grade" id="class4Grade" ng-model="class4Grade">
+					</td>
+					<td class="notshaded">
+						<input type="number" class="textfield form-control ng-pristine ng-untouched ng-valid" name="class4Hours" id="class4Hours" ng-model="class4Hours">
+					</td>
+				</tr>
+				<tr>
+					<td class="shaded" style="background-color:#bb8d0a; color:#ffffff;">
+						Class 5
+					</td>
+					<td class="notshaded">
+						<input type="text" class="textfield form-control ng-pristine ng-untouched ng-valid" name="class5Grade" id="class5Grade" ng-model="class5Grade">
+					</td>
+					<td class="notshaded">
+						<input type="number" class="textfield form-control ng-pristine ng-valid ng-touched" name="class5Hours" id="class5Hours" ng-model="class5Hours">
+					</td>
+				</tr>
+				<tr>
+					<td class="shaded" style="background-color:#bb8d0a; color:#ffffff;">
+						Class 6
+					</td>
+					<td class="notshaded">
+						<input type="text" class="textfield form-control ng-pristine ng-untouched ng-valid" name="class6Grade" id="class6Grade" ng-model="class6Grade">
+					</td>
+					<td class="notshaded">
+						<input type="number" class="textfield form-control ng-pristine ng-untouched ng-valid" name="class6Hours" id="class6Hours" ng-model="class6Hours">
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						&nbsp;
+					</td>
+					<td>
+						<br>
+						<button type="button" class="myButton" onclick="calculate()">
+							Calculate
+						</button>
+						&nbsp;&nbsp;
+						<button type="button" class="myButton" onclick="reset()">
+							Reset
+						</button>
+					</td>
+				</tr>
+			</tbody>
+			<tfoot ng-show="showResults" class="tablefooter">
+				<tr>
+					<td colspan="3" class="ng-binding">
+						<br>
+						<strong>
+							Semester Cumulative GPA: 
+							<p id="result"></p>
+						</strong>
+					</td>
+				</tr>
+			</tfoot>
+		</table>
+	</div>
+</body>
+</html>
